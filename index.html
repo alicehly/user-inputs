@@ -12,11 +12,11 @@
 
   <meta charset="UTF-8">
   <title>Another Drink?</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<script src="js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script src="script.js"></script>
 </head>
 <body> 
   
@@ -25,13 +25,17 @@
     <!-- <img src="https://media.giphy.com/media/zyxiqEQb6wTSg/giphy.gif" alt=""> -->
     <center><img id="club-img" src="http://www.drinktails.com/wp-content/uploads/2015/02/roteiro-sex-and-the-city-sp_6.jpg" alt="">
     <h1>Should I have another drink?</h1>
-    <div class="form" id="age-form">
-      <input type="number" id="intoxicated" placeholder="Drunk Scale 1-10?">
-      <button id="intoxicated-level">This drunk</button>
+    <div class="form" id="scale-form">
+      <form>
+  <input type="range" name="Scale" min="0" max="10">
+</form>
+      <button type="button" class="btn btn-default">This Drunk</button>
+
     </div>
+
     <div class="form" id="bank-form">
       <input type="number" id="bank-account" placeholder="$ in bank?">
-      <button id="account-submit">This much</button>
+      <button type="button" class="btn btn-default">This Much</button>
     </div>
     <div id="answer" class="answer-text"></div>
   </div>
