@@ -7,40 +7,31 @@ $( document ).ready(function() {
 $(function() {
   //All JS goes within these brackets  
   
-  $("#drunk-scale").click(function(){
-    
-    //select the box with id of age
-    //get the value from that box
+  $("#intoxicated-level").click(function(){
     var drunkString = $("#age").val();
-
-    //convert string to number
     var drunk = drunkInt(drunkString);
 
     //check if person is too drunk
     if ( scale >= 7 ) {
       //if person is drunk, next question
-      $("#neil-form").show();
-      $("#age-form").hide();
+      $("#drunk-result").text("No!");
     } else {
-      $("#answer").text("No!");
-      $("#club-img").attr("src", "");
+      $("#drunk-result").text("Yes!");
     }
     
   });
 
-  $("#neil-submit").click(function(){
-    var neilAlbumsString = $("#neil-albums").val();
-    var neilAlbums = parseInt(neilAlbumsString);
+  $("#user-submit").click(function(){
+    var accountBalance = $("#bankMoney").val();
+    var bankBalance = parseInt(neilAlbumsString);
 
-    if ( neilAlbums < 50 ) {
-      $("#neil-form").hide();
-      $("#answer").text("No!");
-      $("#club-img").attr("src", "https://media.giphy.com/media/zyxiqEQb6wTSg/giphy.gif");
-      
+    if ( bankBalance <= 50 ) {
+      $("#wallet-result").text("Don't do it!");
     } else {
       $("#answer").text("You're good!");
-      $("#club-img").attr("src", "");
+
     }
   });
 
 });
+
